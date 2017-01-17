@@ -1,0 +1,10 @@
+C:\Users\guthe\Documents\Visual Studio 2010\Projects\Adatbazis\Adatbazis\bin\Debug\nevek.accdb
+C:\Users\guthe\Documents\Visual Studio 2010\Projects\Adatbazis\Adatbazis\bin\Debug\Adatbazis.exe.config
+C:\Users\guthe\Documents\Visual Studio 2010\Projects\Adatbazis\Adatbazis\bin\Debug\Adatbazis.exe
+C:\Users\guthe\Documents\Visual Studio 2010\Projects\Adatbazis\Adatbazis\bin\Debug\Adatbazis.pdb
+C:\Users\guthe\Documents\Visual Studio 2010\Projects\Adatbazis\Adatbazis\obj\x86\Debug\Adatbazis.frmFo.resources
+C:\Users\guthe\Documents\Visual Studio 2010\Projects\Adatbazis\Adatbazis\obj\x86\Debug\Adatbazis.Properties.Resources.resources
+C:\Users\guthe\Documents\Visual Studio 2010\Projects\Adatbazis\Adatbazis\obj\x86\Debug\Adatbazis.csproj.GenerateResource.Cache
+C:\Users\guthe\Documents\Visual Studio 2010\Projects\Adatbazis\Adatbazis\obj\x86\Debug\Adatbazis.exe
+C:\Users\guthe\Documents\Visual Studio 2010\Projects\Adatbazis\Adatbazis\obj\x86\Debug\Adatbazis.pdb
+C:\Users\guthe\Documents\Visual Studio 2010\Projects\Adatbazis\Adatbazis\obj\x86\Debug\Adatbazis.frmLekerdez.resources
