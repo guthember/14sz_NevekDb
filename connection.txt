@@ -1,0 +1,1 @@
+Provider=Microsoft.ACE.OLEDB.12.0;Data Source="C:\Users\guthe\Documents\visual studio 2010\Projects\14sz_NevekDb\nevek.accdb"

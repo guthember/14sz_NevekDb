@@ -13,6 +13,7 @@ namespace Adatbazis
     public partial class frmFo : Form
     {
         static string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\nevek.accdb";
+        
         public frmFo()
         {
             InitializeComponent();
@@ -45,8 +46,14 @@ namespace Adatbazis
             catch (Exception kivetel)
             {
                 MessageBox.Show(kivetel.Message, "Adatbázis hiba!");
-                throw;
+                //throw;
             }
+        }
+
+        private void adatbevitelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBevitel formBevitel = new frmBevitel();
+            formBevitel.ShowDialog();
         }
     }
 }

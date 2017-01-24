@@ -1,4 +1,5 @@
 ﻿using System.Data;
+
 namespace Adatbazis
 {
     partial class frmLekerdez
@@ -31,15 +32,16 @@ namespace Adatbazis
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nevekDataSet = new Adatbazis.nevekDataSet();
-            this.nevekBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nevekTableAdapter = new Adatbazis.nevekDataSetTableAdapters.nevekTableAdapter();
             this.azDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nevDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nevekBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nevekDataSet = new Adatbazis.nevekDataSet();
+            this.nevekTableAdapter = new Adatbazis.nevekDataSetTableAdapters.nevekTableAdapter();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nevekDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nevekBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nevekDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -58,20 +60,6 @@ namespace Adatbazis
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(514, 366);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // nevekDataSet
-            // 
-            this.nevekDataSet.DataSetName = "nevekDataSet";
-            this.nevekDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // nevekBindingSource
-            // 
-            this.nevekBindingSource.DataMember = "nevek";
-            this.nevekBindingSource.DataSource = this.nevekDataSet;
-            // 
-            // nevekTableAdapter
-            // 
-            this.nevekTableAdapter.ClearBeforeFill = true;
             // 
             // azDataGridViewTextBoxColumn
             // 
@@ -99,20 +87,47 @@ namespace Adatbazis
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             this.emailDataGridViewTextBoxColumn.Width = 60;
             // 
+            // nevekBindingSource
+            // 
+            this.nevekBindingSource.DataMember = "nevek";
+            this.nevekBindingSource.DataSource = this.nevekDataSet;
+            // 
+            // nevekDataSet
+            // 
+            this.nevekDataSet.DataSetName = "nevekDataSet";
+            this.nevekDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nevekTableAdapter
+            // 
+            this.nevekTableAdapter.ClearBeforeFill = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(554, 41);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(54, 17);
+            this.checkBox1.TabIndex = 1;
+            this.checkBox1.Text = "E-mail";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // frmLekerdez
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 370);
+            this.ClientSize = new System.Drawing.Size(697, 370);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmLekerdez";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lekérdezés";
             this.Load += new System.EventHandler(this.frmLekerdez_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nevekDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nevekBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nevekDataSet)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -133,5 +148,6 @@ namespace Adatbazis
         private System.Windows.Forms.DataGridViewTextBoxColumn azDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nevDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

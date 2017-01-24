@@ -31,33 +31,45 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.kilépésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lekérdezésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adatbevitelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kilépésToolStripMenuItem,
-            this.lekérdezésToolStripMenuItem});
+            this.lekérdezésToolStripMenuItem,
+            this.adatbevitelToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(401, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(401, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // kilépésToolStripMenuItem
             // 
+            this.kilépésToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kilépésToolStripMenuItem.Name = "kilépésToolStripMenuItem";
-            this.kilépésToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.kilépésToolStripMenuItem.Size = new System.Drawing.Size(71, 25);
             this.kilépésToolStripMenuItem.Text = "Kilépés";
             this.kilépésToolStripMenuItem.Click += new System.EventHandler(this.kilépésToolStripMenuItem_Click);
             // 
             // lekérdezésToolStripMenuItem
             // 
+            this.lekérdezésToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lekérdezésToolStripMenuItem.Name = "lekérdezésToolStripMenuItem";
-            this.lekérdezésToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.lekérdezésToolStripMenuItem.Size = new System.Drawing.Size(99, 25);
             this.lekérdezésToolStripMenuItem.Text = "Lekérdezés";
             this.lekérdezésToolStripMenuItem.Click += new System.EventHandler(this.lekérdezésToolStripMenuItem_Click);
+            // 
+            // adatbevitelToolStripMenuItem
+            // 
+            this.adatbevitelToolStripMenuItem.Name = "adatbevitelToolStripMenuItem";
+            this.adatbevitelToolStripMenuItem.Size = new System.Drawing.Size(100, 25);
+            this.adatbevitelToolStripMenuItem.Text = "Adatbevitel";
+            this.adatbevitelToolStripMenuItem.Click += new System.EventHandler(this.adatbevitelToolStripMenuItem_Click);
             // 
             // frmFo
             // 
@@ -81,6 +93,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem kilépésToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lekérdezésToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adatbevitelToolStripMenuItem;
     }
 }
 
