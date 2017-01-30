@@ -47,5 +47,48 @@ namespace Adatbazis
                 }
             }
         }
+
+        private void tbEmail_Validating(object sender, CancelEventArgs e)
+        {
+            string email = tbEmail.Text;
+
+            bool van = false;
+            for (int i = 0; i < email.Length; i++)
+            {
+                if (email[i] == '@') 
+                {
+                    van = true;
+                    break;
+                }
+            }
+            if (!van)
+            {
+                e.Cancel = true;
+                MessageBox.Show("Nem érvényes e-mail cím", "Adatbevitel hiba",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            bool vanHiba = false;
+            if (tbNev.Text.Length == 0)
+            {
+                MessageBox.Show("Nem lehet üres a név", "Adatbevitel hiba",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                vanHiba = true;
+            }
+            if (tbEmail.Text.Length == 0)
+            {
+                MessageBox.Show("Nem lehet üres az e-mail", "Adatbevitel hiba",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                vanHiba = true;
+            }
+            if (!vanHiba)
+            {
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+        }
     }
 }

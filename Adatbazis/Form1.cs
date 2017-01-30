@@ -53,7 +53,10 @@ namespace Adatbazis
         private void adatbevitelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmBevitel formBevitel = new frmBevitel();
-            formBevitel.ShowDialog();
+            if (formBevitel.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("Eddig jó!", "Csak ellenőrzés");
+            }
         }
     }
 }
