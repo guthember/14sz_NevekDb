@@ -55,8 +55,38 @@ namespace Adatbazis
             frmBevitel formBevitel = new frmBevitel();
             if (formBevitel.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("Eddig jó!", "Csak ellenőrzés");
+                try
+                {
+                    //MessageBox.Show("Eddig jó!", "Csak ellenőrzés");
+                    OleDbConnection kapcsolat = new OleDbConnection();
+                    kapcsolat.ConnectionString = connectionString;
+                    OleDbCommand felvitel = new OleDbCommand("Insert into nevek(nev,[e-mail]) values ('" +
+                                            formBevitel.Nev + "','" + formBevitel.Email + "')", kapcsolat);
+                    felvitel.Connection.Open();
+                    int tmp = felvitel.ExecuteNonQuery(); // parancs végrehajtása
+                    if (tmp > 0)
+                    {
+                        MessageBox.Show("Adatbevitel megtörtént.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Adatbevitel hiba miatt nem történt meg.");
+                    }
+
+                    kapcsolat.Close();
+                }
+                catch (Exception kivetel)
+                {
+                    MessageBox.Show(kivetel.Message, "Adatbázis hiba!", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
             }
+        }
+
+        private void módosításToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmModositas formModositas = new frmModositas();
+            formModositas.ShowDialog();
         }
     }
 }

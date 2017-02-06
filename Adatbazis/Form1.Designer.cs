@@ -32,6 +32,7 @@
             this.kilépésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lekérdezésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adatbevitelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.módosításToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +42,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kilépésToolStripMenuItem,
             this.lekérdezésToolStripMenuItem,
-            this.adatbevitelToolStripMenuItem});
+            this.adatbevitelToolStripMenuItem,
+            this.módosításToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(401, 29);
@@ -71,6 +73,13 @@
             this.adatbevitelToolStripMenuItem.Text = "Adatbevitel";
             this.adatbevitelToolStripMenuItem.Click += new System.EventHandler(this.adatbevitelToolStripMenuItem_Click);
             // 
+            // módosításToolStripMenuItem
+            // 
+            this.módosításToolStripMenuItem.Name = "módosításToolStripMenuItem";
+            this.módosításToolStripMenuItem.Size = new System.Drawing.Size(94, 25);
+            this.módosításToolStripMenuItem.Text = "Módosítás";
+            this.módosításToolStripMenuItem.Click += new System.EventHandler(this.módosításToolStripMenuItem_Click);
+            // 
             // frmFo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -94,6 +103,7 @@
         private System.Windows.Forms.ToolStripMenuItem kilépésToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lekérdezésToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adatbevitelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem módosításToolStripMenuItem;
     }
 }
 
