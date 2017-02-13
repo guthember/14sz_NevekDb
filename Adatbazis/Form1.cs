@@ -86,7 +86,33 @@ namespace Adatbazis
         private void módosításToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmModositas formModositas = new frmModositas();
-            formModositas.ShowDialog();
+            if (formModositas.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    OleDbConnection kapcsolat = new OleDbConnection();
+                    kapcsolat.ConnectionString = connectionString;
+                    kapcsolat.Open();
+                    OleDbCommand modositas = new OleDbCommand("update nevek set [e-mail] =('"
+                        + formModositas.Email + "') where nev=('" + formModositas.Nev + "')", kapcsolat);
+                    int tmp = modositas.ExecuteNonQuery();
+                    if (tmp > 0)
+                    {
+                        MessageBox.Show("Adatbevitel megtörtént.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Adatbevitel hiba miatt nem történt meg.");
+                    }
+                    kapcsolat.Close();
+                }
+                catch (Exception kivetel)
+                {
+                    MessageBox.Show(kivetel.Message, "Adatbázis hiba!", MessageBoxButtons.OK,
+                                           MessageBoxIcon.Error);
+                }
+            }
+
         }
     }
 }

@@ -32,13 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.tbEmail = new System.Windows.Forms.TextBox();
             this.cbNev = new System.Windows.Forms.ComboBox();
-            this.nevekDataSet = new Adatbazis.nevekDataSet();
             this.nevekBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nevekDataSet = new Adatbazis.nevekDataSet();
             this.nevekTableAdapter = new Adatbazis.nevekDataSetTableAdapters.nevekTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.nevekDataSet)).BeginInit();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nevekBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nevekDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,13 +69,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.Location = new System.Drawing.Point(100, 121);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(270, 26);
-            this.tbEmail.TabIndex = 3;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cbNev
             // 
@@ -86,28 +80,36 @@
             this.cbNev.Name = "cbNev";
             this.cbNev.Size = new System.Drawing.Size(270, 28);
             this.cbNev.TabIndex = 4;
-            // 
-            // nevekDataSet
-            // 
-            this.nevekDataSet.DataSetName = "nevekDataSet";
-            this.nevekDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.cbNev.SelectedIndexChanged += new System.EventHandler(this.cbNev_SelectedIndexChanged);
             // 
             // nevekBindingSource
             // 
             this.nevekBindingSource.DataMember = "nevek";
             this.nevekBindingSource.DataSource = this.nevekDataSet;
             // 
+            // nevekDataSet
+            // 
+            this.nevekDataSet.DataSetName = "nevekDataSet";
+            this.nevekDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // nevekTableAdapter
             // 
             this.nevekTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.Location = new System.Drawing.Point(100, 118);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(270, 26);
+            this.tbEmail.TabIndex = 5;
             // 
             // frmModositas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(426, 282);
-            this.Controls.Add(this.cbNev);
             this.Controls.Add(this.tbEmail);
+            this.Controls.Add(this.cbNev);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -118,8 +120,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Módosítás";
             this.Load += new System.EventHandler(this.frmModositas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nevekDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nevekBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nevekDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,10 +132,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.ComboBox cbNev;
         private nevekDataSet nevekDataSet;
         private System.Windows.Forms.BindingSource nevekBindingSource;
         private nevekDataSetTableAdapters.nevekTableAdapter nevekTableAdapter;
+        private System.Windows.Forms.TextBox tbEmail;
     }
 }
