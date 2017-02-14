@@ -33,6 +33,7 @@
             this.lekérdezésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adatbevitelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.módosításToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.törlésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,10 +44,11 @@
             this.kilépésToolStripMenuItem,
             this.lekérdezésToolStripMenuItem,
             this.adatbevitelToolStripMenuItem,
-            this.módosításToolStripMenuItem});
+            this.módosításToolStripMenuItem,
+            this.törlésToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(401, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(496, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -80,11 +82,18 @@
             this.módosításToolStripMenuItem.Text = "Módosítás";
             this.módosításToolStripMenuItem.Click += new System.EventHandler(this.módosításToolStripMenuItem_Click);
             // 
+            // törlésToolStripMenuItem
+            // 
+            this.törlésToolStripMenuItem.Name = "törlésToolStripMenuItem";
+            this.törlésToolStripMenuItem.Size = new System.Drawing.Size(64, 25);
+            this.törlésToolStripMenuItem.Text = "Törlés";
+            this.törlésToolStripMenuItem.Click += new System.EventHandler(this.törlésToolStripMenuItem_Click);
+            // 
             // frmFo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 378);
+            this.ClientSize = new System.Drawing.Size(496, 378);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmFo";
@@ -104,6 +113,7 @@
         private System.Windows.Forms.ToolStripMenuItem lekérdezésToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adatbevitelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem módosításToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem törlésToolStripMenuItem;
     }
 }
 

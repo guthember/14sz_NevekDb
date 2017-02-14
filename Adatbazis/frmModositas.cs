@@ -65,5 +65,31 @@ namespace Adatbazis
             DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void tbEmail_Validated(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tbEmail_Validating(object sender, CancelEventArgs e)
+        {
+            string email = tbEmail.Text;
+
+            bool van = false;
+            for (int i = 0; i < email.Length; i++)
+            {
+                if (email[i] == '@')
+                {
+                    van = true;
+                    break;
+                }
+            }
+            if (!van)
+            {
+                e.Cancel = true;
+                MessageBox.Show("Nem érvényes e-mail cím", "Adatbevitel hiba",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

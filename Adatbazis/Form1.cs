@@ -114,5 +114,36 @@ namespace Adatbazis
             }
 
         }
+
+        private void törlésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTorles formTorles = new frmTorles();
+            if (formTorles.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    OleDbConnection kapcsolat = new OleDbConnection();
+                    kapcsolat.ConnectionString = connectionString;
+                    kapcsolat.Open();
+                    OleDbCommand modositas = new OleDbCommand("delete from nevek where az = " +
+                        formTorles.Azonosito, kapcsolat);
+                    int tmp = modositas.ExecuteNonQuery();
+                    if (tmp > 0)
+                    {
+                        MessageBox.Show("Adattörlés megtörtént.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Adattörlés hiba miatt nem történt meg.");
+                    }
+                    kapcsolat.Close();
+                }
+                catch (Exception kivetel)
+                {
+                    MessageBox.Show(kivetel.Message, "Adatbázis hiba!", MessageBoxButtons.OK,
+                                           MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }

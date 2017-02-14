@@ -70,6 +70,12 @@
     <Compile Include="frmModositas.Designer.cs">
       <DependentUpon>frmModositas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTorles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTorles.Designer.cs">
+      <DependentUpon>frmTorles.cs</DependentUpon>
+    </Compile>
     <Compile Include="nevekDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmModositas.resx">
       <DependentUpon>frmModositas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTorles.resx">
+      <DependentUpon>frmTorles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

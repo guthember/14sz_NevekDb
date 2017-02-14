@@ -102,6 +102,8 @@
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(270, 26);
             this.tbEmail.TabIndex = 5;
+            this.tbEmail.Validating += new System.ComponentModel.CancelEventHandler(this.tbEmail_Validating);
+            this.tbEmail.Validated += new System.EventHandler(this.tbEmail_Validated);
             // 
             // frmModositas
             // 

@@ -21,3 +21,4 @@ C:\Users\guthe\Documents\visual studio 2010\Projects\14sz_NevekDb\Adatbazis\obj\
 C:\Users\guthe\Documents\visual studio 2010\Projects\14sz_NevekDb\Adatbazis\obj\x86\Debug\Adatbazis.csprojResolveAssemblyReference.cache
 C:\Users\guthe\Documents\visual studio 2010\Projects\14sz_NevekDb\Adatbazis\obj\x86\Debug\Adatbazis.frmBevitel.resources
 C:\Users\guthe\Documents\visual studio 2010\Projects\14sz_NevekDb\Adatbazis\obj\x86\Debug\Adatbazis.frmModositas.resources
+C:\Users\guthe\Documents\visual studio 2010\Projects\14sz_NevekDb\Adatbazis\obj\x86\Debug\Adatbazis.frmTorles.resources
